@@ -23,14 +23,14 @@ LOG_DIR = os.path.join(BASE_DIR, 'log')
 CASE_DIR = os.path.join(BASE_DIR, 'test_case')
 
 # yaml测试用例数据路径
-CASEYMAL_DIR = os.path.join(BASE_DIR, "database", "caseYAML", )  # 测试数据
-LOCATORYMAL_DIR = os.path.join(BASE_DIR, "database", "locatorYAML", )  # 定位数据
+CASEYMAL_DIR = os.path.join(BASE_DIR, "dataset", "caseYAML", )  # 测试数据
+LOCATORYMAL_DIR = os.path.join(BASE_DIR, "dataset", "locatorYAML", )  # 定位数据
 
 ### 测试文件路径
-DATA_FILE = os.path.join(BASE_DIR, "database", "file")
+DATA_FILE = os.path.join(BASE_DIR, "dataset", "file")
 
 # 测试图片断言路径
-DIFF_IMGPATH = os.path.join(BASE_DIR, "database", "file", "img")
+DIFF_IMGPATH = os.path.join(BASE_DIR, "dataset", "file", "img")
 
 # 测试用例结果目录
 PRPORE_JSON_DIR = os.path.join(BASE_DIR, "output", "report_json")

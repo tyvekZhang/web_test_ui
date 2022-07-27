@@ -93,7 +93,7 @@ class GetCaseYmal:
 
         if case_name is not None:  # 如果用例名称不为空 可自动识别读取定位数据还是测试数据
             self.modelname = yaml_name  # 模块名称 对应yaml 文件名
-            self.case_name = case_name  # 用列名称 对应 yaml 用列
+            self.case_name = case_name  # 用列名称 对应 yaml 用例
 
             if case_name.startswith('test'):
                 self.FLIE_PATH = os.path.join(CASEYMAL_DIR, f"{self.yaml_name}")

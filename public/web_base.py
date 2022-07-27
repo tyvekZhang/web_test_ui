@@ -4,13 +4,9 @@
 Author：tyvek_zhang
 Date：2022/07/26
 """
-import os
-import sys
-import time
+import os, sys, time, allure
 from enum import Enum
 from typing import TypeVar
-
-import allure
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
@@ -18,7 +14,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
-
 from config import PRPORE_SCREEN_DIR
 from public.common import ErrorExcep, logger, is_assertion, read_conf
 from public.read_data import GetCaseYmal, replace_py_yaml
@@ -47,32 +42,28 @@ else:
     IMPLICITLY_WAIT_TIME = APP_IMPLICITLY_WAIT_TIME
 
 
-class Locaate(Enum):
+class Locate(Enum):
     """
     定位类型枚举类
-        定位类型
-                types 对应selenium 的操作
-                web 8中  function为函数类型
-          types                              selenium
-          (/ 代表或者 link_text or link > LINK_TEXT)
-          "id"                            >   ID
-          "xpath"                         >   XPATH
-          "link_text/link"                >   LINK_TEXT
-          "partial_link_text/partial"     >   PARTIAL_LINK_TEXT
-          "name"                          >   NAME
-          "tag_name/tag"                  >   TAG_NAME
-          "class_name/class"              >   CLASS_NAME
-          "css_selector/css"              >   CSS_SELECTOR
-          "function"                      >   web_html_content 或 web_url web_title
-                app    web(8)+ app 7中  15
-        "accessibility_id"        >    ACCESSIBILITY_ID       --对应检测器 android 对应 content-desc和accessibilityid/iso对应labe和name属性accessibilityid
-        "android_uiautomator"     >      ANDROID_UIAUTOMATOR  --对应检测器 java 语法 new UiSelector().text("显示")
-        "android_viewtag"         >      ANDROID_VIEWTAG
-        "android_datamatcher"     >      ANDROID_DATA_MATCHER
-        "android_viewmatcher"     >      ANDROID_VIEW_MATCHER
-        "ios_predicate"           >      IOS_PREDICATE   -- 对应检测器ios predicate
-        "ios_class_chain"         >      IOS_CLASS_CHAIN -- 对应检测器ios class chain
 
+        定位类型:  k: 页面元素  v: selenium操作
+            {
+                "id": "ID",
+                "xpath": "XPATH",
+                "link_text/link": "LINK_TEXT",
+                "partial_link_text/partial": "PARTIAL_LINK_TEXT",
+                "name": "NAME",
+                "tag_name/tag": "TAG_NAME",
+                "class_name/class": "CLASS_NAME",
+                "css_selector/css": "CSS_SELECTOR",
+                "accessibility_id": "ACCESSIBILITY_ID",
+                "android_uiautomator": "ANDROID_UIAUTOMATOR",
+                "android_viewtag": "ANDROID_VIEWTAG",
+                "android_datamatcher": "ANDROID_DATA_MATCHER",
+                "android_viewmatcher": "ANDROID_VIEW_MATCHER",
+                "ios_predicate": "IOS_PREDICATE",
+                "ios_class_chain": "IOS_CLASS_CHAIN"
+            }
         建议使用推荐  ** xpath消耗性能 app定位时尽量不使用 xpath
         *安卓 (android_uiautomator、android_viewtag、android_datamatcher、android_viewmatcher、resource-id、 id 、xpath )
         *iso (ios_predicate 、ios_class_chain 、resource-id、xpath)
@@ -89,25 +80,25 @@ class Locaate(Enum):
 
 class Operation(Enum):
     """
-       操作类型:
-       操作类型                                    执行动作
-       input                       >               输入
-       click                       >               点击
-       text                        >               提取文本
-       submit                      >               提交
-       scroll                      >               滑动下拉
-       clear                       >               清除
-       jsclear                     >               js清除
-       jsclear_continue_input      >               js清除后输入
-       clear_continue_input        >               清除在输入
-       web_url                     >               获取当前url
-       web_title                   >               获取当前title
-       web_html_content            >               获取html内容
-       iframe                      >               跳转到iframe
-
-       slide                       >              滑动屏幕 (只支持app)
-       """
-
+    操作类型枚举类
+        操作类型: k: 操作类型, v: 执行动作
+            {
+                "input": "输入",
+                "click": "点击",
+                "text": "提取文本",
+                "submit": "提交",
+                "scroll": "滑动下拉",
+                "clear": "清除",
+                "jsclear": "js清除",
+                "jsclear_continue_input": "js清除后输入",
+                "clear_continue_input": "清除在输入",
+                "iframe": "跳转到iframe",
+                "web_url": "获取当前url",
+                "web_title": "获取当前title",
+                "web_html_content": "获取html内容",
+                "slide": "滑动屏幕 (只支持app)"
+            }
+    """
     web_operation = ['input', 'click', 'text', 'submit', 'scroll', 'clear',
                      'jsclear', 'jsclear_continue_input', 'clear_continue_input',
                      'web_url', 'web_title', 'web_html_content', 'iframe']
@@ -130,7 +121,7 @@ class Base:
         :return:
         """
         types = types.lower()
-        locate_typess = Locaate.web_types.value
+        locate_typess = Locate.web_types.value
 
         if types not in locate_typess:
             logger.error(f'web目前只支持{locate_typess}')
@@ -161,29 +152,24 @@ class Base:
 
     def app_by(self, types: str) -> EM or None:
         """
-                定位类型
-                types 对应selenium 的操作
-                web 8中  function为函数类型
-          types                              selenium
-          (/ 代表或者 link_text or link > LINK_TEXT)
-          "id"                            >   ID
-          "xpath"                         >   XPATH
-          "link_text/link"                >   LINK_TEXT
-          "partial_link_text/partial"     >   PARTIAL_LINK_TEXT
-          "name"                          >   NAME
-          "tag_name/tag"                  >   TAG_NAME
-          "class_name/class"              >   CLASS_NAME
-          "css_selector/css"              >   CSS_SELECTOR
-          "function"                      >   web_html_content 或 web_url web_title
-                    app 7中
-        "accessibility_id"        >    ACCESSIBILITY_ID       --对应检测器 android 对应 content-desc和accessibilityid/iso对应labe和name属性accessibilityid
-        "android_uiautomator"     >      ANDROID_UIAUTOMATOR  --对应检测器 java 语法 new UiSelector().text("显示")
-        "android_viewtag"         >      ANDROID_VIEWTAG
-        "android_datamatcher"     >      ANDROID_DATA_MATCHER
-        "android_viewmatcher"     >      ANDROID_VIEW_MATCHER
-        "ios_predicate"           >      IOS_PREDICATE   -- 对应检测器ios predicate
-        "ios_class_chain"         >      IOS_CLASS_CHAIN -- 对应检测器ios class chain
-
+       定位类型:  k: 页面元素  v: selenium操作
+            {
+                "id": "ID",
+                "xpath": "XPATH",
+                "link_text/link": "LINK_TEXT",
+                "partial_link_text/partial": "PARTIAL_LINK_TEXT",
+                "name": "NAME",
+                "tag_name/tag": "TAG_NAME",
+                "class_name/class": "CLASS_NAME",
+                "css_selector/css": "CSS_SELECTOR",
+                "accessibility_id": "ACCESSIBILITY_ID",
+                "android_uiautomator": "ANDROID_UIAUTOMATOR",
+                "android_viewtag": "ANDROID_VIEWTAG",
+                "android_datamatcher": "ANDROID_DATA_MATCHER",
+                "android_viewmatcher": "ANDROID_VIEW_MATCHER",
+                "ios_predicate": "IOS_PREDICATE",
+                "ios_class_chain": "IOS_CLASS_CHAIN"
+            }
         建议使用推荐  ** xpath消耗性能 app定位时尽量不使用 xpath
         *安卓 (android_uiautomator、android_viewtag、android_datamatcher、android_viewmatcher、resource-id、 id 、xpath )
         *iso (ios_predicate 、ios_class_chain 、resource-id、xpath)
@@ -192,7 +178,7 @@ class Base:
         """
 
         types = types.lower()
-        app_locate_typess = Locaate.app_types.value
+        app_locate_typess = Locate.app_types.value
 
         if types not in app_locate_typess:
             logger.error(f'app目前只支持{app_locate_typess}')
@@ -969,7 +955,7 @@ class Base:
 
     def get_case(self, yaml_names=None, case_names=None):
         """
-        获取用例数据   如果 case_names 以 test_ 开头直接找 caseYAML 目录下  如果不是 找 locaotrTAML
+        获取用例数据   如果 case_names 以 test_ 开头直接找 caseYAML 目录下  如果不是 找 locaotrYAML
         :param yaml_names: ymal 路径
         :param case_names:  用例名称
         :return:
@@ -989,22 +975,22 @@ class Web(Base):
 
     def web_judge_execution(self, types, locate, operate=None, text=None, notes=None, index=None, wait=None):
         """
-          操作类型:
-        操作类型                                    执行动作
-        input                       >               输入
-        click                       >               点击
-        text                        >               提取文本
-        submit                      >               提交
-        scroll                      >               滑动下拉
-        clear                       >               清除
-        jsclear                     >               js清除
-        jsclear_continue_input      >               js清除后输入
-        clear_continue_input        >               清除在输入
-        iframe                      >               跳转到iframe
-        web_url                     >               获取当前url
-        web_title                   >               获取当前title
-        web_html_content            >               获取html内容
-
+        操作类型: k: 操作类型, v: 执行动作
+            {
+                "input": "输入",
+                "click": "点击",
+                "text": "提取文本",
+                "submit": "提交",
+                "scroll": "滑动下拉",
+                "clear": "清除",
+                "jsclear": "js清除",
+                "jsclear_continue_input": "js清除后输入",
+                "clear_continue_input": "清除在输入",
+                "iframe": "跳转到iframe",
+                "web_url": "获取当前url",
+                "web_title": "获取当前title",
+                "web_html_content": "获取html内容"
+            }
         判断 operate 执行操作
         :param locate:  表达 或者定位元素
         :param operate: 执行操作

@@ -15,10 +15,10 @@ from public.common import DelReport, ErrorExcep, logger
 from public.emails import SendEMail
 
 OUT_TITLE = """
-══════════════════════════════════════════
-║            WEB-UI-AUTO                 ║
-║       No one can put out the stars !   ║
-══════════════════════════════════════════
+════════════════════════════════════════
+║                    AI                ║
+║        Change the world !            ║
+════════════════════════════════════════
 """
 
 logger.info(OUT_TITLE)

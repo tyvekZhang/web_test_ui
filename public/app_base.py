@@ -298,23 +298,24 @@ class App(AppBase):
 
     def app_judge_execution(self, types, locate, operate=None, text=None, notes=None, index=None, wait=None):
         """
-          app操作类型 执行:
-        操作类型                                    执行动作
-        input                       >               输入
-        click                       >               点击
-        text                        >               提取文本
-        submit                      >               提交
-        scroll                      >               滑动下拉
-        clear                       >               清除
-        jsclear                     >               js清除
-        jsclear_continue_input      >               js清除后输入
-        clear_continue_input        >               清除在输入
-        iframe                      >               跳转到iframe
-        web_url                     >               获取当前url
-        web_title                   >               获取当前title
-        web_html_content            >               获取html内容
-        slide                      >              滑动屏幕 (只支持app)
-
+        pp操作类型 执行:
+            操作类型: k: 操作类型, v: 执行动作
+                {
+                    "input": "输入",
+                    "click": "点击",
+                    "text": "提取文本",
+                    "submit": "提交",
+                    "scroll": "滑动下拉",
+                    "clear": "清除",
+                    "jsclear": "js清除",
+                    "jsclear_continue_input": "js清除后输入",
+                    "clear_continue_input": "清除在输入",
+                    "iframe": "跳转到iframe",
+                    "web_url": "获取当前url",
+                    "web_title": "获取当前title",
+                    "web_html_content": "获取html内容",
+                    "slide": "滑动屏幕 (只支持app)"
+                }
         判断 operate 执行操作
         :param locate:  表达 或者定位元素
         :param operate: 执行操作
