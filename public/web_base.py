@@ -5,6 +5,7 @@ Author：tyvek_zhang
 Date：2022/07/26
 """
 import os, sys, time, allure
+from pywinauto import Desktop
 from enum import Enum
 from typing import TypeVar
 from appium.webdriver.common.appiumby import AppiumBy
@@ -1084,7 +1085,18 @@ class Web(Base):
                 logger.debug(notes)
                 return self.web_html_content
 
-    def webexe(self, yamlfile, case, text=None, wait=0.1):
+    def web_upload(self, text=None):
+        """
+        在弹出窗口选择文件, 实现上传功能
+        """
+        app = Desktop()
+        dialog = app['打开']  # 根据名字找到弹出窗口
+        dialog["Edit"].type_keys(text)  # 在输入框中输入值
+        dialog["ScrollBar"].click()
+        dialog["Button"].click()
+
+
+    def webexe(self, yamlfile, case, text=None, wait=0.5):
         """
         自动执行定位步骤
         :param yamlfile:  yaml文件

@@ -17,7 +17,7 @@ class TestRun:
     @allure.title("提交反应设计任务")
     @allure.description('fasta + cas12a + RPA组合"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.smoke  # 用列标记
+    @pytest.mark.test_api  # 用列标记
     @pytest.mark.parametrize('content', read_pytestdata(__file__, 'test_submit_job_opt_one'))  # 测试数据
     def test_submit_job_opt_one(self, goDriver, content):
         run = Run(goDriver)

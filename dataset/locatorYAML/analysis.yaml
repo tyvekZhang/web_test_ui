@@ -1,0 +1,66 @@
+- model: Run
+
+- casename: click_switch_to_analysis
+  title: 切换到analysis菜单项
+  precond:
+  testdata:
+  element:
+    - casesteid:
+      types: xpath
+      operate: click
+      locate: //*[@id="root"]/div/section/aside/div/div[1]/ul/li[3]/span
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:              #操作等待时间  folt/s
+      info: 切换到analysis菜单项
+
+- casename: click_plate_info
+  title: 点击获取酶标仪分类信息
+  precond:
+  testdata:
+  element:
+    - casesteid:
+      types: xpath
+      operate: click
+      locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/div[1]/div[1]/div/div
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:              #操作等待时间  folt/s
+      info:
+
+- casename: click_chose_plate_type
+  title: 选择酶标仪类型
+  precond:
+  testdata:
+  element:
+    - casesteid:
+      types: xpath
+      operate: click
+      locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[2]/div
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:              #操作等待时间  folt/s
+      info:
+
+- casename: click_upload_file
+  title: 调出文件上传弹窗
+  precond:
+  testdata:
+  element:
+    - casesteid:
+      types: xpath
+      operate: click
+      locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/div[1]/div[2]/span/div[1]/span/button/span[2]
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:              #操作等待时间  folt/s
+      info:
+
+- casename: click_download_result
+  title: 下载分析结果
+  precond:
+  testdata:
+  element:
+    - casesteid:
+      types: xpath
+      operate: click
+      locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[1]/a/button/span[2]
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:              #操作等待时间  folt/s
+      info:
