@@ -14,6 +14,7 @@ from public import read_pytestdata
 
 @allure.feature("数据分析")  # 测试用例特性(主要功能模块)
 @allure.story("数据分析操作")  # 模块说明
+@ pytest.mark.run(order = -1)
 class TestRun:
 
     @allure.title("酶标仪数据分析")

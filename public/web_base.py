@@ -1093,7 +1093,7 @@ class Web(Base):
         dialog = app['打开']  # 根据名字找到弹出窗口
         dialog["Edit"].type_keys(text)  # 在输入框中输入值
         dialog["ScrollBar"].click()
-        dialog["Button"].click()
+        dialog["Button"].click_input()
 
 
     def webexe(self, yamlfile, case, text=None, wait=0.5):

@@ -12,12 +12,13 @@ from page_object.design import Design
 
 @allure.feature("反应查询")  # 测试用例特性(主要功能模块)
 @allure.story("反应结果操作")  # 模块说明
+@ pytest.mark.run(order = -2)
 class TestDesign:
 
     @allure.title("反应结果查询及下载")
     @allure.description('cas12a + RPA结果"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.test_api  # 用列标记
+    @pytest.mark.smoke  # 用列标记
     def test_target_search_cas12_rpa(self, goDriver):
         design = Design(goDriver)
 

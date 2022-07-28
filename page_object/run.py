@@ -31,6 +31,12 @@ class Run(Web):
         """
         self.webexe(__file__, sys._getframe().f_code.co_name)
 
+    def upload_file(self, content):
+        """
+        上传文件
+        """
+        self.web_upload(text=content)
+
     def click_cas_options(self):
         """
         点击获取cas蛋白选项
