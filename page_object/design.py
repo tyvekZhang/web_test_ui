@@ -1,41 +1,74 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver import ActionChains
-from base.base_page import BasePage
+import os
+import sys
+from public import Web
+
+sys.path.append(os.pardir)
 
 
-class Design(BasePage):
-    url = 'http://10.101.4.25/'
-    def query_target_result(self):
-        cas = (By.XPATH,'//*[@id="root"]/div/section/div[2]/main/div/div/div/div/form/div[1]/div[2]/div/div/div/div')
-        self.click(cas)
-        cas_option = (By.XPATH, '/html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]')
-        self.wait(0.5)
-        self.click(cas_option)
-        taxPk = (By.ID, 'taxPk')
-        self.click(taxPk)
-        self.wait(0.5)
-        tax_ancestor_fir_pos = (By.XPATH, '/html/body/div[3]/div/div/div/div/ul[1]/li[1]/div[1]')
-        tax_ancestor_fir = self.locator(tax_ancestor_fir_pos)
-        action = ActionChains(self.driver)
-        action.move_to_element(tax_ancestor_fir)
-        action.perform()
-        self.wait(0.5)
-        tax_ancestor_sec_pos = (By.XPATH, '/html/body/div[3]/div/div/div/div/ul[2]/li[1]/div[1]')
-        tax_ancestor_sec = self.locator(tax_ancestor_sec_pos)
-        action.move_to_element(tax_ancestor_sec)
-        action.perform()
-        self.wait(0.5)
-        tax_ancestor_third_pos = (By.XPATH, '/html/body/div[3]/div/div/div/div/ul[3]/li[1]/div')
-        self.click(tax_ancestor_third_pos)
-        query_button = (By.XPATH, '//*[@id="root"]/div/section/div[2]/main/div/div/div/div/form/div[4]/div/div/div/button/span')
-        self.click(query_button)
-        self.wait(10)
-        self.driver.close()
+class Design(Web):
 
-if __name__ == '__main__':
-    driver = webdriver.Chrome()
-    indexScreen = Design(driver)
-    indexScreen.open()
-    driver.maximize_window()
-    indexScreen.query_target_result()
+    def click_cas_options(self):
+        """
+        点击获取cas蛋白选项
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def sel_rna_guided_endonucleases_cas12(self):
+        """
+        选择RNA引导核酸内切酶
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_tax_info(self):
+        """
+        点击获取分类信息
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_tax_fir(self):
+        """
+        点击一级分类
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_tax_sec(self):
+        """
+        点击二级分类
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_tax_thi(self):
+        """
+        点击三级分类
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_query_button(self):
+        """
+        点击获取cas蛋白选项
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_download_result(self):
+        """
+        下载查询结果
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_forword_primer_blast(self):
+        """
+        forward_primer局部搜索
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_reverse_primer_blast(self):
+        """
+        reverse_primer局部搜索
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_sgrna_blast(self):
+        """
+        click_sgrna_blast局部搜索
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
