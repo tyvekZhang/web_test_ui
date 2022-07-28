@@ -17,7 +17,7 @@ class TestDesign:
     @allure.title("反应结果查询及下载")
     @allure.description('cas12a + RPA结果"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.smoke  # 用列标记
+    @pytest.mark.test_api  # 用列标记
     def test_target_search_cas12_rpa(self, goDriver):
         design = Design(goDriver)
 
@@ -54,6 +54,6 @@ class TestDesign:
         with allure.step('click_sgrna_blast局部搜索'):
             design.click_sgrna_blast()
 
-        design.sleep(5)
+        design.sleep(10)
 
         assert design.web_visibility_of_element_located('xpath', '/html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div/div/div/div/div[1]/table/thead/tr/th[4]')
