@@ -19,6 +19,24 @@ class Design(Web):
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
+    def sel_rna_guided_endonucleases_cas13(self):
+        """
+        选择RNA引导核酸内切酶
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_chose_lamp(self):
+        """
+        点击获取分类信息
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_chose_pcr(self):
+        """
+        点击获取分类信息
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
     def click_tax_info(self):
         """
         点击获取分类信息

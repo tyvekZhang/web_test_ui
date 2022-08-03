@@ -25,9 +25,15 @@ class Analysis(Web):
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
-    def click_chose_plate_type(self):
+    def click_chose_spark(self):
         """
-        选择酶标仪类型
+        选择spark类型的酶标仪
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_chose_enspire(self):
+        """
+        选择enspire类型的酶标仪
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
@@ -48,3 +54,5 @@ class Analysis(Web):
         下载分析结果
         """
         self.webexe(__file__, sys._getframe().f_code.co_name)
+
+

@@ -21,7 +21,7 @@ class TestWangYi:
     @allure.story("测试iffrom")  # 模块说明
     @allure.title("测试iffrom")  # 用例标题
     @allure.description('测试iffrom')  # 用例描述
-    @pytest.mark.testwy_web  # 用列标记
+    @pytest.mark.testwy_web  # 用例标记
     @pytest.mark.parametrize('user,pwd', read_pytestdata(__file__, 'test_wy63_go'))  # 测试数据
     def test_wy63_go(self, goDriver,user,pwd):
         wy = WangYi(goDriver)

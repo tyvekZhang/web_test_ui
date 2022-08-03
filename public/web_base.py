@@ -100,7 +100,7 @@ class Operation(Enum):
                 "slide": "滑动屏幕 (只支持app)"
             }
     """
-    web_operation = ['input', 'click', 'text', 'submit', 'scroll', 'clear',
+    web_operation = ['input', 'click', 'text', 'submit', 'scroll', 'clear', 'hover_clicks',
                      'jsclear', 'jsclear_continue_input', 'clear_continue_input',
                      'web_url', 'web_title', 'web_html_content', 'iframe']
 
@@ -327,6 +327,19 @@ class Base:
         if direction == "down":
             logger.debug('滚动到底部')
             self.driver.execute_script("window.scrollBy(0, 10000)")
+
+    def web_scroll_part(self, direction: str) -> None:
+        """
+        网页滚动 部分网页不可用时轻请使用  web_scroll_to_ele
+        :param direction: str   up 向上   Down 向下
+        :return:
+        """
+        if direction == "up":
+            logger.debug('滚动到顶部')
+            self.driver.execute_script("window.scrollBy(0, -300);")
+        if direction == "down":
+            logger.debug('滚动到底部')
+            self.driver.execute_script("window.scrollBy(0, 300)")
 
     def web_scroll_to_ele(self, types: str, locate: str, index: int = None) -> None:
         """
@@ -764,7 +777,7 @@ class Base:
         else:  # find_element
             element = WebDriverWait(self.driver, timeout=IMPLICITLY_WAIT_TIME,
                                     poll_frequency=POLL_FREQUENCY).until(
-                lambda x: x.find_element(types, locate))
+                lambda x: x.find_elements(types, locate))
             return element
 
     def web_submit(self, types: str, locate: str, index: int = None) -> None:
@@ -1020,6 +1033,11 @@ class Web(Base):
                 else:
                     logger.error(' 函数必须传递 text 参数')
 
+            elif operate == 'hover_clicks':  # 点击操作
+                self.sleep(wait)
+                logger.debug(notes)
+                return self.web_element_hover_clicks(types=types, locate=locate, index=index)
+
             elif operate == 'click':  # 点击操作
                 self.sleep(wait)
                 logger.debug(notes)
@@ -1096,7 +1114,7 @@ class Web(Base):
         dialog["Button"].click_input()
 
 
-    def webexe(self, yamlfile, case, text=None, wait=0.5):
+    def webexe(self, yamlfile, case, text=None, wait=0.3):
         """
         自动执行定位步骤
         :param yamlfile:  yaml文件
@@ -1129,7 +1147,7 @@ class Web(Base):
 
 class AutoRunCase(Web):
     """
-    自动执行测试用列
+    自动执行测试用例
     """
 
     def run(self, yamlfile, case, test_date=None, forwait=None):

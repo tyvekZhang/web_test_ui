@@ -1,7 +1,43 @@
 - model: TestRun  # 对应case的类名称
 
-- casename: test_submit_job_opt_one     # 对应类的 函数
+- casename: test_submit_job_taxon_cas12_pcr     # 对应类的 函数
   title: 输入文件路径            # 操作标题
   precond:        # 前置说明
   testdata: # 测试数据 /列表
-    - content: E:\data\tryRunCas12a.fasta
+    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
+      specificity_content:
+
+- casename: test_submit_job_taxon_cas12_lamp     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
+      specificity_content:
+
+- casename: test_submit_job_taxon_cas12_rpa     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
+      specificity_content:
+
+- casename: test_submit_job_fasta_cas12_rpa     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
+      specificity_content:
+
+- casename: test_submit_job_fasta_cas12_lamp     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
+      specificity_content:
+
+- casename: test_submit_job_fasta_cas12_pcr     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
+      specificity_content:

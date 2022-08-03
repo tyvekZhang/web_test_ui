@@ -21,10 +21,49 @@
     - casesteid: 2
       types: xpath
       operate: click
-      locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]
+      locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[2]/div
       listindex:              # 多个时列表索引 单个为空 /int
       locawait:              #操作等待时间  folt/s
       info: 选择cas12引导核酸内切酶       # 操作说明
+
+- casename: sel_rna_guided_endonucleases_cas13
+  title: 选择cas13引导核酸内切酶
+  precond:
+  testdata:
+  element:
+    - casesteid:
+      types: xpath
+      operate: click
+      locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]/div
+      listindex:
+      locawait:
+      info:
+
+- casename: click_chose_lamp
+  title: 选择扩增方案为lamp
+  precond:
+  testdata:
+  element:
+    - casesteid:
+      types: xpath
+      operate: click
+      locate: //*[@id="amplificationMode"]/label[2]/span[2]
+      listindex:
+      locawait:
+      info:
+
+- casename: click_chose_pcr
+  title: 选择扩增方案为pcr
+  precond:
+  testdata:
+  element:
+    - casesteid:
+      types: xpath
+      operate: click
+      locate: //*[@id="amplificationMode"]/label[1]/span[2]
+      listindex:
+      locawait:
+      info:
 
 - casename: click_tax_info
   title: 点击获取分类信息

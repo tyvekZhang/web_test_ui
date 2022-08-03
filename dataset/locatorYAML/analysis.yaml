@@ -26,8 +26,8 @@
       locawait:              #操作等待时间  folt/s
       info:
 
-- casename: click_chose_plate_type
-  title: 选择酶标仪类型
+- casename: click_chose_spark
+  title: 选择spark类型的酶标仪
   precond:
   testdata:
   element:
@@ -37,6 +37,19 @@
       locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[2]/div
       listindex:              # 多个时列表索引 单个为空 /int
       locawait:              #操作等待时间  folt/s
+      info:
+
+- casename: click_chose_enspire
+  title: 选择enspire类型的酶标仪
+  precond:
+  testdata:
+  element:
+    - casesteid:
+      types: xpath
+      operate: click
+      locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]/div
+      listindex:
+      locawait:
       info:
 
 - casename: click_upload_file
