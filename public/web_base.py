@@ -334,6 +334,7 @@ class Base:
         :param direction: str   up 向上   Down 向下
         :return:
         """
+        self.sleep(0.5)
         if direction == "up":
             logger.debug('滚动到顶部')
             self.driver.execute_script("window.scrollBy(0, -300);")
@@ -777,7 +778,7 @@ class Base:
         else:  # find_element
             element = WebDriverWait(self.driver, timeout=IMPLICITLY_WAIT_TIME,
                                     poll_frequency=POLL_FREQUENCY).until(
-                lambda x: x.find_elements(types, locate))
+                lambda x: x.find_element(types, locate))
             return element
 
     def web_submit(self, types: str, locate: str, index: int = None) -> None:
@@ -1114,7 +1115,7 @@ class Web(Base):
         dialog["Button"].click_input()
 
 
-    def webexe(self, yamlfile, case, text=None, wait=0.3):
+    def webexe(self, yamlfile, case, text=None, wait=0.1):
         """
         自动执行定位步骤
         :param yamlfile:  yaml文件

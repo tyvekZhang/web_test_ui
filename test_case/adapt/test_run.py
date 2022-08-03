@@ -37,7 +37,7 @@ class TestRun:
     @allure.title("fasta + cas12a + LAMP进行设计")
     @allure.description('fasta + cas12a + LAMP提交任务"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas12_lamp'))  #
     # 测试数据
     def test_submit_job_fasta_cas12_lamp(self, goDriver, content, specificity_content):
@@ -58,7 +58,7 @@ class TestRun:
     @allure.title("fasta + cas12a + PCR进行设计")
     @allure.description('fasta + cas12a + PCR提交任务"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas12_pcr'))
     def test_submit_job_fasta_cas12_pcr(self, goDriver, content, specificity_content):
         run = Run(goDriver)
@@ -78,7 +78,7 @@ class TestRun:
     @allure.title("taxon + cas12a + RPA进行设计")
     @allure.description('taxon + cas12a + RPA提交任务"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas12_rpa'))
     def test_submit_job_taxon_cas12_rpa(self, goDriver, content, specificity_content):
         run = Run(goDriver)
@@ -96,7 +96,7 @@ class TestRun:
     @allure.title("taxon + cas12a + LAMP进行设计")
     @allure.description('taxon + cas12a + LAMP提交任务"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas12_lamp'))
     def test_submit_job_taxon_cas12_lamp(self, goDriver, content, specificity_content):
         run = Run(goDriver)
@@ -116,7 +116,7 @@ class TestRun:
     @allure.title("taxon + cas12a + PCR进行设计")
     @allure.description('taxon + cas12a + PCR提交任务"')
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke
+    @pytest.mark.smoke
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas12_pcr'))
     def test_submit_job_taxon_cas12_pcr(self, goDriver, content, specificity_content):
         run = Run(goDriver)
@@ -216,6 +216,7 @@ class TestRun:
             run.web_scroll_part(direction='down')
 
     def click_submit_button_fasta(self, run: Run):
+        self.web_scroll_part(run)
 
         with allure.step('fasta为输入下点击提交按钮'):
             run.click_submit_button_fasta()
@@ -227,8 +228,9 @@ class TestRun:
         self.click_show_result(run)
 
     def click_submit_button_taxon(self, run: Run):
+        self.click_show_result(run)
 
-        run.sleep(2)
+        run.sleep(1)
 
         with allure.step('选择病毒下点击提交按钮'):
             run.click_submit_button_taxon()
@@ -236,19 +238,16 @@ class TestRun:
 
         self.click_confirm_ok(run)
 
-        self.click_show_result(run)
-
     def screen_shot(self, run: Run):
         run.screen_shot(str(run.__class__.__name__))
-
-        run.sleep(2)
 
     def click_confirm_ok(self, run: Run):
         with allure.step('点击确认按钮'):
             run.click_confirm_ok()
-            run.sleep(2)
+            run.sleep(20)
 
     def click_show_result(self, run: Run):
-        with allure.step('点击确认按钮'):
+        with allure.step('查看计算结果'):
             run.click_show_result()
             run.sleep(3)
+            self.screen_shot(run)

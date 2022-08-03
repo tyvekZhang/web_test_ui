@@ -5,12 +5,12 @@
   precond:
   testdata:
   element:
-    - casesteid: 1
+    - casesteid:
       types: xpath
       operate: click
       locate: //*[@id="root"]/div/section/aside/div/div[1]/ul/li[2]/span
-      listindex:
-      locawait:
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:              #操作等待时间  folt/s
       info:
 
 - casename: click_chose_fasta_type

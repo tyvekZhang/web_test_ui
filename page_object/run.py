@@ -113,6 +113,7 @@ class Run(Web):
         """
         fasta文件输入扩增方案为lamp
         """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
 
     def click_chose_specificity_taxon(self):
         """
