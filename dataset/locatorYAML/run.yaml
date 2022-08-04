@@ -47,7 +47,7 @@
     - casesteid: 1
       types: xpath
       operate: click
-      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[11]/div[2]/div/div/span/div[1]/span/div
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[10]/div[2]/div/div/span/div[1]/span/div
       listindex:              # 多个时列表索引 单个为空 /int
       locawait:              #操作等待时间  folt/s
       info:
@@ -117,6 +117,19 @@
       locawait:
       info:
 
+- casename: select_cas13_fasta
+  title: fasta文件输入选择cas13引导核酸内切酶
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]/div
+      listindex:
+      locawait:
+      info:
+
 - casename: select_cas12_taxon
   title: 病毒分类输入选择cas12引导核酸内切酶
   precond:
@@ -126,6 +139,19 @@
       types: xpath
       operate: click
       locate: /html/body/div[3]/div/div/div/div[2]/div[1]/div/div/div[2]/div
+      listindex:
+      locawait:
+      info:
+
+- casename: select_cas13_taxon
+  title: 病毒分类输入选择cas13引导核酸内切酶
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: /html/body/div[3]/div/div/div/div[2]/div[1]/div/div/div[1]/div
       listindex:
       locawait:
       info:
@@ -235,17 +261,24 @@
       info:
 
 - casename: click_chose_specificity_viral
-  title: 选择一种特异性病毒
+  title: 选择一种特异性病毒并确认
   precond:
   testdata:
   element:
-    - casesteid:
+    - casesteid: 1
       types: xpath
       operate: click
-      locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]/div
+      locate: /html/body/div[3]/div/div/div/div[2]/div[1]/div/div/div[1]/div
       listindex:              # 多个时列表索引 单个为空 /int
       locawait:              #操作等待时间  folt/s
-      info:
+      info: 选择一种特异性病毒
+    - casesteid: 2
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[10]/div[2]/button
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:              #操作等待时间  folt/s
+      info: 点击确认按钮
 
 - casename: click_chose_specificity_fasta
   title: 选择以fasta文件形式添加特异性约束
@@ -255,13 +288,13 @@
     - casesteid: 1
       types: xpath
       operate: click
-      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[7]/div/div[2]
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[9]/div/div[2]/label/button
       listindex:
       locawait:
       info:
 
 - casename: click_submit_button_fasta
-  title: 点击提交按钮
+  title: fasta为输入下点击提交按钮
   precond:
   testdata:
   element:
@@ -271,7 +304,20 @@
       locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[12]/div/div/div/button/span
       listindex:              # 多个时列表索引 单个为空 /int
       locawait:              #操作等待时间  folt/s
-      info: 点击提交按钮
+      info: fasta为输入下点击提交按钮
+
+- casename: click_submit_button_fasta_specificity
+  title: fasta为输入考虑特异性下点击提交按钮
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[13]/div/div/div/button
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:              #操作等待时间  folt/s
+      info:
 
 - casename: click_submit_button_taxon
   title: 选择病毒下点击提交按钮
@@ -282,6 +328,19 @@
       types: xpath
       operate: click
       locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[11]/div/div/div/button/span
+      listindex:
+      locawait:
+      info:
+
+- casename: click_submit_button_taxon_specificity
+  title: 选择病毒考虑特异下点击提交按钮
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[15]/div/div/div/button
       listindex:
       locawait:
       info:

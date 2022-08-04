@@ -337,10 +337,10 @@ class Base:
         self.sleep(0.5)
         if direction == "up":
             logger.debug('滚动到顶部')
-            self.driver.execute_script("window.scrollBy(0, -300);")
+            self.driver.execute_script("window.scrollBy(0, -170);")
         if direction == "down":
             logger.debug('滚动到底部')
-            self.driver.execute_script("window.scrollBy(0, 300)")
+            self.driver.execute_script("window.scrollBy(0, 170)")
 
     def web_scroll_to_ele(self, types: str, locate: str, index: int = None) -> None:
         """

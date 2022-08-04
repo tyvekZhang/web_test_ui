@@ -4,40 +4,251 @@
   title: 输入文件路径            # 操作标题
   precond:        # 前置说明
   testdata: # 测试数据 /列表
-    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
-      specificity_content:
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
 
 - casename: test_submit_job_taxon_cas12_lamp     # 对应类的 函数
   title: 输入文件路径            # 操作标题
   precond:        # 前置说明
   testdata: # 测试数据 /列表
-    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
-      specificity_content:
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
 
 - casename: test_submit_job_taxon_cas12_rpa     # 对应类的 函数
   title: 输入文件路径            # 操作标题
   precond:        # 前置说明
   testdata: # 测试数据 /列表
-    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
-      specificity_content:
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
 
 - casename: test_submit_job_fasta_cas12_rpa     # 对应类的 函数
   title: 输入文件路径            # 操作标题
   precond:        # 前置说明
   testdata: # 测试数据 /列表
-    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
-      specificity_content:
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
 
 - casename: test_submit_job_fasta_cas12_lamp     # 对应类的 函数
   title: 输入文件路径            # 操作标题
   precond:        # 前置说明
   testdata: # 测试数据 /列表
-    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
-      specificity_content:
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
 
 - casename: test_submit_job_fasta_cas12_pcr     # 对应类的 函数
   title: 输入文件路径            # 操作标题
   precond:        # 前置说明
   testdata: # 测试数据 /列表
-    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\tryRunCas12a.fasta
-      specificity_content:
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas13_rpa     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas13_lamp     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas13_pcr     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas13_rpa     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas13_lamp     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas13_rpa_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas13_lamp_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas13_pcr_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas13_rpa_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas13_lamp_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas13_pcr_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas13_pcr     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas12_rpa_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas12_lamp_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas12_pcr_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas12_rpa_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas12_lamp_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas12_pcr_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas12_rpa_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+
+- casename: test_submit_job_fasta_cas12_lamp_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas12_pcr_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas12_rpa_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas12_lamp_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas12_pcr_specificity_fasta     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas13_rpa_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas13_lamp_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_fasta_cas13_pcr_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas13_rpa_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas13_lamp_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+
+- casename: test_submit_job_taxon_cas13_pcr_specificity_taxon     # 对应类的 函数
+  title: 输入文件路径            # 操作标题
+  precond:        # 前置说明
+  testdata: # 测试数据 /列表
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta

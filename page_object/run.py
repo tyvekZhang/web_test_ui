@@ -74,9 +74,21 @@ class Run(Web):
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
+    def select_cas13_taxon(self):
+        """
+        病毒分类输入选择cas13引导核酸内切酶
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
     def select_cas12_fasta(self):
         """
         fasta输入下选择cas12引导核酸内切酶
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def select_cas13_fasta(self):
+        """
+        fasta输入下选择cas13引导核酸内切酶
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
@@ -129,7 +141,7 @@ class Run(Web):
 
     def click_chose_specificity_viral(self):
         """
-        选择一种特异性病毒
+        选择一种特异性病毒并确认
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
@@ -151,6 +163,17 @@ class Run(Web):
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
+    def click_submit_button_fasta_specificity(self):
+        """
+        fasta为输入考虑特异性下点击提交按钮
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_submit_button_taxon_specificity(self):
+        """
+        选择病毒考虑特异下点击提交按钮
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
 
     def click_submit_button_taxon(self):
         """

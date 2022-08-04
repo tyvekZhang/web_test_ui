@@ -16,10 +16,134 @@ from public import read_pytestdata
 @pytest.mark.run(order=-3)
 class TestRun:
 
+
+
+
+
+    @allure.title("fasta + cas13 + RPA进行设计")
+    @allure.description('fasta + cas13 + RPA提交任务"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas13_rpa'))  #测试数据
+    def test_submit_job_fasta_cas13_rpa(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_fasta(run)
+
+        self.click_submit_button_fasta(run)
+
+    @allure.title("fasta + cas13 + LAMP进行设计")
+    @allure.description('fasta + cas13 + LAMP提交任务"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas13_lamp'))  #
+    # 测试数据
+    def test_submit_job_fasta_cas13_lamp(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_fasta(run)
+
+        self.click_chose_lamp_fasta(run)
+
+        self.click_submit_button_fasta(run)
+
+    @allure.title("fasta + cas13 + PCR进行设计")
+    @allure.description('fasta + cas13 + PCR提交任务"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas13_pcr'))
+    def test_submit_job_fasta_cas13_pcr(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_fasta(run)
+
+        self.click_chose_pcr_fasta(run)
+
+        self.click_submit_button_fasta(run)
+
+    @allure.title("taxon + cas13 + RPA进行设计")
+    @allure.description('taxon + cas13 + RPA提交任务"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas13_rpa'))
+    def test_submit_job_taxon_cas13_rpa(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_taxon(run)
+
+        self.click_submit_button_taxon(run)
+
+    @allure.title("taxon + cas13 + LAMP进行设计")
+    @allure.description('taxon + cas13 + LAMP提交任务"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas13_lamp'))
+    def test_submit_job_taxon_cas13_lamp(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_taxon(run)
+
+        self.click_chose_lamp_taxon(run)
+
+        self.click_submit_button_taxon(run)
+
+    @allure.title("taxon + cas13 + PCR进行设计")
+    @allure.description('taxon + cas13 + PCR提交任务"')
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas13_pcr'))
+    def test_submit_job_taxon_cas13_pcr(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_taxon(run)
+
+        self.click_chose_pcr_taxon(run)
+
+        self.click_submit_button_taxon(run)
+
+
+
+
     @allure.title("fasta + cas12a + RPA进行设计")
     @allure.description('fasta + cas12a + RPA提交任务"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.smoke  # 用例标记
+    @pytest.mark.my  # 用例标记
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas12_rpa'))  #测试数据
     def test_submit_job_fasta_cas12_rpa(self, goDriver, content, specificity_content):
         run = Run(goDriver)
@@ -37,7 +161,7 @@ class TestRun:
     @allure.title("fasta + cas12a + LAMP进行设计")
     @allure.description('fasta + cas12a + LAMP提交任务"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.smoke  # 用例标记
+    @pytest.mark.my  # 用例标记
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas12_lamp'))  #
     # 测试数据
     def test_submit_job_fasta_cas12_lamp(self, goDriver, content, specificity_content):
@@ -58,7 +182,7 @@ class TestRun:
     @allure.title("fasta + cas12a + PCR进行设计")
     @allure.description('fasta + cas12a + PCR提交任务"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.smoke  # 用例标记
+    @pytest.mark.my  # 用例标记
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas12_pcr'))
     def test_submit_job_fasta_cas12_pcr(self, goDriver, content, specificity_content):
         run = Run(goDriver)
@@ -78,7 +202,7 @@ class TestRun:
     @allure.title("taxon + cas12a + RPA进行设计")
     @allure.description('taxon + cas12a + RPA提交任务"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.smoke  # 用例标记
+    @pytest.mark.my  # 用例标记
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas12_rpa'))
     def test_submit_job_taxon_cas12_rpa(self, goDriver, content, specificity_content):
         run = Run(goDriver)
@@ -96,7 +220,7 @@ class TestRun:
     @allure.title("taxon + cas12a + LAMP进行设计")
     @allure.description('taxon + cas12a + LAMP提交任务"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.smoke  # 用例标记
+    @pytest.mark.my  # 用例标记
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas12_lamp'))
     def test_submit_job_taxon_cas12_lamp(self, goDriver, content, specificity_content):
         run = Run(goDriver)
@@ -116,7 +240,7 @@ class TestRun:
     @allure.title("taxon + cas12a + PCR进行设计")
     @allure.description('taxon + cas12a + PCR提交任务"')
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.smoke
+    @pytest.mark.my
     @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas12_pcr'))
     def test_submit_job_taxon_cas12_pcr(self, goDriver, content, specificity_content):
         run = Run(goDriver)
@@ -132,6 +256,541 @@ class TestRun:
         self.click_chose_pcr_taxon(run)
 
         self.click_submit_button_taxon(run)
+
+
+    @allure.title("fasta + cas13 + RPA + fasta进行特异性设计")
+    @allure.description('fasta + cas13 + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.smoke  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas13_rpa_specificity_fasta'))  #测试数据
+    def test_submit_job_fasta_cas13_rpa_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_fasta(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("fasta + cas13 + LAMP + fasta进行特异性设计")
+    @allure.description('fasta + cas13 + LAMP + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas13_lamp_specificity_fasta'))  #
+    # 测试数据
+    def test_submit_job_fasta_cas13_lamp_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_fasta(run)
+
+        self.click_chose_lamp_fasta(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("fasta + cas13 + PCR + fasta进行特异性设计")
+    @allure.description('fasta + cas13 + PCR + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas13_pcr_specificity_fasta'))
+    def test_submit_job_fasta_cas13_pcr_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_fasta(run)
+
+        self.click_chose_pcr_fasta(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("taxon + cas13 + RPA + fasta进行特异性设计")
+    @allure.description('taxon + cas13 + RPA + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas13_rpa_specificity_fasta'))
+    def test_submit_job_taxon_cas13_rpa_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_taxon(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("taxon + cas13 + LAMP + fasta进行特异性设计")
+    @allure.description('taxon + cas13 + LAMP + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas13_lamp_specificity_fasta'))
+    def test_submit_job_taxon_cas13_lamp_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_taxon(run)
+
+        self.click_chose_lamp_taxon(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("taxon + cas13 + PCR + fasta进行特异性设计")
+    @allure.description('taxon + cas13 + PCR + fasta进行特异性设计"')
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas13_pcr_specificity_fasta'))
+    def test_submit_job_taxon_cas13_pcr_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_taxon(run)
+
+        self.click_chose_pcr_taxon(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+
+
+
+    @allure.title("fasta + cas12a + RPA + taxon进行特异性设计")
+    @allure.description('fasta + cas12a + RPA + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas12_rpa_specificity_taxon'))  #测试数据
+    def test_submit_job_fasta_cas12_rpa_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_fasta(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("fasta + cas12a + LAMP + taxon进行特异性设计")
+    @allure.description('fasta + cas12a + LAMP + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas12_lamp_specificity_taxon'))  #
+    # 测试数据
+    def test_submit_job_fasta_cas12_lamp_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_fasta(run)
+
+        self.click_chose_lamp_fasta(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("fasta + cas12a + PCR + taxon进行特异性设计")
+    @allure.description('fasta + cas12a + PCR + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_fasta_cas12_pcr_specificity_taxon'))
+    def test_submit_job_fasta_cas12_pcr_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_fasta(run)
+
+        self.click_chose_pcr_fasta(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("taxon + cas12a + RPA + taxon进行特异性设计")
+    @allure.description('taxon + cas12a + RPA + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas12_rpa_specificity_taxon'))
+    def test_submit_job_taxon_cas12_rpa_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_taxon(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("taxon + cas12a + LAMP + taxon进行特异性设计")
+    @allure.description('taxon + cas12a + LAMP + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas12_lamp_specificity_taxon'))
+    def test_submit_job_taxon_cas12_lamp_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_taxon(run)
+
+        self.click_chose_lamp_taxon(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("taxon + cas12a + PCR + taxon进行特异性设计")
+    @allure.description('taxon + cas12a + PCR + taxon进行特异性设计"')
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my
+    @pytest.mark.parametrize('content, specificity_content', read_pytestdata(__file__, 'test_submit_job_taxon_cas12_pcr_specificity_taxon'))
+    def test_submit_job_taxon_cas12_pcr_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_taxon(run)
+
+        self.click_chose_pcr_taxon(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+
+    #     12的少fasta特异, 13的少taxon特异
+
+    @allure.title("fasta + cas12a + RPA + fasta进行特异性设计")
+    @allure.description('fasta + cas12a + RPA + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_fasta_cas12_rpa_specificity_fasta'))  # 测试数据
+    def test_submit_job_fasta_cas12_rpa_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_fasta(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("fasta + cas12a + LAMP + fasta进行特异性设计")
+    @allure.description('fasta + cas12a + LAMP + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_fasta_cas12_lamp_specificity_fasta'))  #
+    # 测试数据
+    def test_submit_job_fasta_cas12_lamp_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_fasta(run)
+
+        self.click_chose_lamp_fasta(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("fasta + cas12a + PCR + fasta进行特异性设计")
+    @allure.description('fasta + cas12a + PCR + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_fasta_cas12_pcr_specificity_fasta'))
+    def test_submit_job_fasta_cas12_pcr_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_fasta(run)
+
+        self.click_chose_pcr_fasta(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("taxon + cas12a + RPA + fasta进行特异性设计")
+    @allure.description('taxon + cas12a + RPA + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_taxon_cas12_rpa_specificity_fasta'))
+    def test_submit_job_taxon_cas12_rpa_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_taxon(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("taxon + cas12a + LAMP + fasta进行特异性设计")
+    @allure.description('taxon + cas12a + LAMP + fasta进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_taxon_cas12_lamp_specificity_fasta'))
+    def test_submit_job_taxon_cas12_lamp_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_taxon(run)
+
+        self.click_chose_lamp_taxon(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("taxon + cas12a + PCR + fasta进行特异性设计")
+    @allure.description('taxon + cas12a + PCR + fasta进行特异性设计"')
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_taxon_cas12_pcr_specificity_fasta'))
+    def test_submit_job_taxon_cas12_pcr_specificity_fasta(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas12_taxon(run)
+
+        self.click_chose_pcr_taxon(run)
+
+        self.common_step_upload_specificity_fasta(run, specificity_content)
+
+        self.click_submit_button_fasta_specificity(run)
+
+    @allure.title("fasta + cas13 + RPA + taxon进行特异性设计")
+    @allure.description('fasta + cas13 + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.smoke  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_fasta_cas13_rpa_specificity_taxon'))  # 测试数据
+    def test_submit_job_fasta_cas13_rpa_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_fasta(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("fasta + cas13 + LAMP + taxon进行特异性设计")
+    @allure.description('fasta + cas13 + LAMP + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_fasta_cas13_lamp_specificity_taxon'))  #
+    # 测试数据
+    def test_submit_job_fasta_cas13_lamp_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_fasta(run)
+
+        self.click_chose_lamp_fasta(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("fasta + cas13 + PCR + taxon进行特异性设计")
+    @allure.description('fasta + cas13 + PCR + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_fasta_cas13_pcr_specificity_taxon'))
+    def test_submit_job_fasta_cas13_pcr_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_upload_fasta(run, content)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_fasta(run)
+
+        self.click_chose_pcr_fasta(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("taxon + cas13 + RPA + taxon进行特异性设计")
+    @allure.description('taxon + cas13 + RPA + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_taxon_cas13_rpa_specificity_taxon'))
+    def test_submit_job_taxon_cas13_rpa_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_taxon(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("taxon + cas13 + LAMP + taxon进行特异性设计")
+    @allure.description('taxon + cas13 + LAMP + taxon进行特异性设计"')  # 用例描述
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my  # 用例标记
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_taxon_cas13_lamp_specificity_taxon'))
+    def test_submit_job_taxon_cas13_lamp_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_taxon(run)
+
+        self.click_chose_lamp_taxon(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
+
+    @allure.title("taxon + cas13 + PCR + taxon进行特异性设计")
+    @allure.description('taxon + cas13 + PCR + taxon进行特异性设计"')
+    @allure.link("https://xxx/testcase/list", name='用例链接link')
+    @pytest.mark.my
+    @pytest.mark.parametrize('content, specificity_content',
+                             read_pytestdata(__file__, 'test_submit_job_taxon_cas13_pcr_specificity_taxon'))
+    def test_submit_job_taxon_cas13_pcr_specificity_taxon(self, goDriver, content, specificity_content):
+        run = Run(goDriver)
+
+        self.common_step_prepare(run)
+
+        self.common_step_chose_taxon(run)
+
+        self.common_step_cas_options(run)
+
+        self.common_step_cas13_taxon(run)
+
+        self.click_chose_pcr_taxon(run)
+
+        self.common_step_chose_taxon_specificity(run, specificity_content)
+
+        self.click_submit_button_taxon_specificity(run)
 
     def common_step_prepare(self, run: Run):
         with allure.step('切换到run菜单项'):
@@ -157,15 +816,24 @@ class TestRun:
         with allure.step('选择一种要设计sgRNA病毒'):
             run.click_chose_viral()
 
+    def common_step_chose_taxon_specificity(self, run: Run):
+        with allure.step('以病毒分类添加特异性约束'):
+            run.click_chose_specificity_taxon()
+
+        with allure.step('点击获取特异性病毒分类信息'):
+            run.click_specificity_taxon_options()
+
+        with allure.step('选择一种特异性病毒并确认'):
+            run.click_chose_specificity_viral()
+
     def common_step_upload_specificity_fasta(self, run: Run, specificity_content):
+        run.sleep(1)
+
         with allure.step('屏幕滚动到底部'):
             run.web_scroll('down')
 
         with allure.step('选择以fasta文件形式添加特异性约束'):
-            # run.click_chose_specificity_fasta()
-            ele = run.driver.find_element_by_xpath(
-                '//*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[7]/div/div[2]/label/button/span')
-            ele.click()
+            run.click_chose_specificity_fasta()
 
         with allure.step('调出特异性文件上传弹窗'):
             run.click_upload_specificity_file()
@@ -183,9 +851,17 @@ class TestRun:
         with allure.step('病毒分类输入选择cas12引导核酸内切酶'):
             run.select_cas12_taxon()
 
+    def common_step_cas13_taxon(self, run: Run):
+        with allure.step('病毒分类输入选择cas13引导核酸内切酶'):
+            run.select_cas13_taxon()
+
     def common_step_cas12_fasta(self, run: Run):
         with allure.step('fasta文件输入选择cas12引导核酸内切酶'):
             run.select_cas12_fasta()
+
+    def common_step_cas13_fasta(self, run: Run):
+        with allure.step('fasta文件输入选择cas13引导核酸内切酶'):
+            run.select_cas13_fasta()
 
     def common_step_lamp(self, run: Run):
         with allure.step('选择扩增方案为lamp'):
@@ -237,6 +913,30 @@ class TestRun:
         self.screen_shot(run)
 
         self.click_confirm_ok(run)
+
+    def click_submit_button_fasta_specificity(self, run: Run):
+        self.web_scroll_part(run)
+
+        with allure.step('fasta为输入考虑特异性下点击提交按钮'):
+            run.click_submit_button_fasta_specificity()
+
+        self.screen_shot(run)
+
+        self.click_confirm_ok(run)
+
+        self.click_show_result(run)
+
+    def click_submit_button_taxon_specificity(self, run: Run):
+        self.web_scroll_part(run)
+
+        with allure.step('选择病毒考虑特异下点击提交按钮'):
+            run.click_submit_button_taxon_specificity()
+
+        self.screen_shot(run)
+
+        self.click_confirm_ok(run)
+
+        self.click_show_result(run)
 
     def screen_shot(self, run: Run):
         run.screen_shot(str(run.__class__.__name__))
