@@ -12,14 +12,14 @@
     WEB_WIMPLICITLY_WAIT_TIME: 10                    # 显示等待最长时间 /s
     WEB_POLL_FREQUENCY: 0.2                         # 显示等待元素出现时 在此时间内检索一次 /s
     WEB_IS_COLONY: False                        # 是否启动集群模式 True(启用)  False(不启用)
-    WEB_HUB_HOST: '192.168.7.101:4444'          # wbs集群hub地址和端口True(启用) 时必填
+    WEB_HUB_HOST: '10.101.4.101:4444'          # wbs集群hub地址和端口True(启用) 时必填
 
 #### 移动 ui 端相关配置
 - APP_UI:
     APP_PLATFORM: 'Android'                             # 'Android'  # ios Android  平台 app 时配合
     APIUMHOST: '192.168.203.4:4723'             # appium 服务器地址
     APP_IS_COLONY: True                        # 是否启动集群模式 True(启用)  False(不启用)
-    APP_HUB_HOST: '192.168.7.101:4444'          # app集群hub地址和端口True(启用) 时必填
+    APP_HUB_HOST: '10.101.4.101:4444'          # app集群hub地址和端口True(启用) 时必填
     APP_IS_EXIT_APPLICATION: True                   # 是否退出应用
     APP_IMPLICITLY_WAIT_TIME: 10                   # 显示等待最长时间 /s
     APP_POLL_FREQUENCY: 0.2                        # 显示等待元素出现时 在此时间内检索一次 /s
@@ -80,7 +80,7 @@
     ORACLE: #oracle
       user: 'root'        # 用户
       password: 'root'    #密码
-      host: '192.168.7.0:1521/ORCL'   # 数据库地址
+      host: '10.101.4.0:1521/ORCL'   # 数据库地址
 
     REDIS: #redis
       host: '127.0.0.1'   # 数据库地址
@@ -89,22 +89,22 @@
 
     REDIS_CLUSTER: #redis 集群
       node1: # 节点1
-        host: '192.168.7.100'   # 数据库地址
+        host: '10.101.4.100'   # 数据库地址
         port: 7000          # 端口
       node2: # 节点2
-        host: '192.168.7.100'
+        host: '10.101.4.100'
         port: 7001
       node3: # 节点3
-        host: '192.168.7.101'
+        host: '10.101.4.101'
         port: 7000
       node4: # 节点4
-        host: '192.168.7.101'
+        host: '10.101.4.101'
         port: 7001
       node5: # 节点5
-        host: '192.168.7.102'
+        host: '10.101.4.102'
         port: 7000
       node6: # 节点6
-        host: '192.168.7.102'
+        host: '10.101.4.102'
         port: 7001
 
     REDIS_CLUSTER_PASWORD: '123456'  # 集群redis密码

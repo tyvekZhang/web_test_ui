@@ -9,8 +9,8 @@
       types: xpath
       operate: click
       locate: //*[@id="root"]/div/section/aside/div/div[1]/ul/li[3]/span
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info: 切换到analysis菜单项
 
 - casename: click_plate_info
@@ -22,8 +22,8 @@
       types: xpath
       operate: click
       locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/div[1]/div[1]/div/div
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_chose_spark
@@ -35,8 +35,8 @@
       types: xpath
       operate: click
       locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[2]/div
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_chose_enspire
@@ -61,8 +61,8 @@
       types: xpath
       operate: click
       locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/div[1]/div[2]/span/div[1]/span/button/span[2]
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_download_result
@@ -74,6 +74,6 @@
       types: xpath
       operate: click
       locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/div[2]/div[1]/div/div/div[1]/a/button/span[2]
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:

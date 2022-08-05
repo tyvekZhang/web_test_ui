@@ -9,9 +9,9 @@
       types: xpath
       operate: click
       locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/form/div[1]/div[2]/div/div/div/div
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
-      info: 点击获取cas蛋白选项       # 操作说明
+      listindex:              
+      locawait:              
+      info: 点击获取cas蛋白选项       
 
 - casename: sel_rna_guided_endonucleases_cas12
   title: 选择cas12引导核酸内切酶
@@ -22,9 +22,9 @@
       types: xpath
       operate: click
       locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[2]/div
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
-      info: 选择cas12引导核酸内切酶       # 操作说明
+      listindex:              
+      locawait:              
+      info: 选择cas12引导核酸内切酶       
 
 - casename: sel_rna_guided_endonucleases_cas13
   title: 选择cas13引导核酸内切酶
@@ -74,9 +74,9 @@
       types: id
       operate: click
       locate: taxPk
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
-      info: 点击获取分类信息       # 操作说明
+      listindex:              
+      locawait:              
+      info: 点击获取分类信息       
 
 - casename: click_tax_fir
   title: 点击一级分类
@@ -87,9 +87,9 @@
       types: xpath
       operate: click
       locate: /html/body/div[3]/div/div/div/div/ul[1]/li[1]/div[1]
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
-      info: 点击一级分类       # 操作说明
+      listindex:              
+      locawait:              
+      info: 点击一级分类       
 
 - casename: click_tax_sec
   title: 点击二级分类
@@ -100,9 +100,9 @@
       types: xpath
       operate: click
       locate: /html/body/div[3]/div/div/div/div/ul[2]/li[1]/div[1]
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
-      info: 点击二级分类       # 操作说明
+      listindex:              
+      locawait:              
+      info: 点击二级分类       
 
 - casename: click_tax_thi
   title: 点击三级分类
@@ -113,9 +113,9 @@
       types: xpath
       operate: click
       locate: /html/body/div[3]/div/div/div/div/ul[3]/li[1]/div
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
-      info: 点击三级分类       # 操作说明
+      listindex:              
+      locawait:              
+      info: 点击三级分类       
 
 - casename: click_query_button
   title: 点击查询按钮
@@ -126,9 +126,9 @@
       types: xpath
       operate: click
       locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/form/div[4]/div/div/div/button/span
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
-      info: 点击查询按钮       # 操作说明
+      listindex:              
+      locawait:              
+      info: 点击查询按钮       
 
 - casename: click_download_result
   title: 下载查询结果
@@ -139,9 +139,9 @@
       types: xpath
       operate: click
       locate: //*[@id="rc_unique_0"]/div/a
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
-      info: 下载查询结果       # 操作说明
+      listindex:              
+      locawait:              
+      info: 下载查询结果       
 
 - casename: click_forword_primer_blast
   title: forward_primer局部搜索
@@ -152,8 +152,8 @@
       types: xpath
       operate: click
       locate: /html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[6]/div/div[1]/div/a
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info: forward_primer局部搜索
 
 - casename: click_reverse_primer_blast
@@ -165,8 +165,8 @@
       types: xpath
       operate: click
       locate: /html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[6]/div/div[2]/div/a
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info: reverse_primer局部搜索
 
 - casename: click_sgrna_blast
@@ -178,6 +178,6 @@
       types: xpath
       operate: click
       locate: /html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[4]/div/a
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info: click_sgrna_blast局部搜索

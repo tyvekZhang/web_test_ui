@@ -9,8 +9,8 @@
       types: xpath
       operate: click
       locate: //*[@id="root"]/div/section/aside/div/div[1]/ul/li[2]/span
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_chose_fasta_type
@@ -35,8 +35,8 @@
       types: xpath
       operate: click
       locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[2]/div[2]/div/div/span/div[1]/span/div/p[1]
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info: 调出文件上传弹窗
 
 - casename: click_upload_specificity_file
@@ -48,8 +48,8 @@
       types: xpath
       operate: click
       locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[10]/div[2]/div/div/span/div[1]/span/div
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_chose_taxon_type
@@ -74,8 +74,8 @@
       types: id
       operate: click
       locate: taxPk
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_chose_viral
@@ -87,8 +87,8 @@
       types: xpath
       operate: click
       locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]/div
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_cas_options
@@ -100,9 +100,9 @@
       types: id
       operate: click
       locate: cas_id
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
-      info: 点击获取cas蛋白选项       # 操作说明
+      listindex:              
+      locawait:              
+      info: 点击获取cas蛋白选项       
 
 - casename: select_cas12_fasta
   title: fasta文件输入选择cas12引导核酸内切酶
@@ -165,8 +165,8 @@
       types: xpath
       operate: click
       locate: /html/body/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]/div
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_chose_lamp
@@ -256,8 +256,8 @@
       types: id
       operate: click
       locate: specificity_taxas
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_chose_specificity_viral
@@ -269,15 +269,15 @@
       types: xpath
       operate: click
       locate: /html/body/div[3]/div/div/div/div[2]/div[1]/div/div/div[1]/div
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info: 选择一种特异性病毒
     - casesteid: 2
       types: xpath
       operate: click
       locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[10]/div[2]/button
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info: 点击确认按钮
 
 - casename: click_chose_specificity_fasta
@@ -302,8 +302,8 @@
       types: xpath
       operate: click
       locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[12]/div/div/div/button/span
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info: fasta为输入下点击提交按钮
 
 - casename: click_submit_button_fasta_specificity
@@ -315,8 +315,8 @@
       types: xpath
       operate: click
       locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[13]/div/div/div/button
-      listindex:              # 多个时列表索引 单个为空 /int
-      locawait:              #操作等待时间  folt/s
+      listindex:              
+      locawait:              
       info:
 
 - casename: click_submit_button_taxon

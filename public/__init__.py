@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding: utf-8
 
 from public.app_base import App
 from public.web_base import Base, Web, AutoRunCase

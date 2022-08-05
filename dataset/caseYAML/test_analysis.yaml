@@ -1,13 +1,13 @@
-- model: TestAnalysis  # 对应case的类名称
+- model: TestAnalysis
 
-- casename: test_analysis_spark     # 对应类的 函数
-  title: 输入文件路径            # 操作标题
-  precond:        # 前置说明
-  testdata: # 测试数据 /列表
-    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\20220620_96-Spark.xlsx
+- casename: test_analysis_spark     
+  title: 输入文件路径            
+  precond:        
+  testdata: 
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpark.xlsx
 
-- casename: test_analysis_enspire     # 对应类的 函数
-  title: 输入文件路径            # 操作标题
-  precond:        # 前置说明
-  testdata: # 测试数据 /列表
-    - content: E:\pythonProject\adapt-autotest\WebUiAutoTest\dataset\file\20220620_96-Spark.csv
+- casename: test_analysis_enspire     
+  title: 输入文件路径            
+  precond:        
+  testdata: 
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryEnspire.csv
