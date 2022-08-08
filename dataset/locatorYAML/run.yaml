@@ -31,26 +31,53 @@
   precond:
   testdata:
   element:
-    - casesteid: 3
+    - casesteid: 1
       types: xpath
       operate: click
-      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[2]/div[2]/div/div/span/div[1]/span/div/p[1]
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[2]/div/div[2]/div/div/span/div[1]/span/div
       listindex:              
       locawait:              
       info: 调出文件上传弹窗
 
 - casename: click_upload_specificity_file
-  title: 调出特异性文件上传弹窗
+  title: 调出特异性文件上传弹窗输入为选择病毒
   precond:
   testdata:
   element:
     - casesteid: 1
       types: xpath
       operate: click
-      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[10]/div[2]/div/div/span/div[1]/span/div
+      locate: //*[@id="rc-tabs-2-panel-1"]/div/div/div/div/form/div[10]/div/div[2]/div/div/span/div[1]/span/div/p[1]
       listindex:              
       locawait:              
       info:
+
+- casename: click_upload_specificity_file_fasta
+  title: 调出特异性文件上传弹窗输入为fasta
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[10]/div/div[2]/div/div/span/div[1]/span/div
+      listindex:
+      locawait:
+      info:
+
+- casename: click_upload_taxon_specificity_file_fasta
+  title: 输入为病毒下调出特异性文件上传弹窗输入为fasta
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[9]/div/div[2]/div/div/span/div[1]/span/div
+      listindex:
+      locawait:
+      info:
+
 
 - casename: click_chose_taxon_type
   title: 选择以病毒分类形式上传序列
@@ -247,6 +274,32 @@
       locawait:
       info:
 
+- casename: click_chose_taxon_specificity_taxon
+  title: 选择病毒分类下以病毒分类添加特异性约束
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[8]/div/div[1]/label/button
+      listindex:
+      locawait:
+      info:
+
+- casename: click_chose_fasta_specificity_taxon
+  title: 输入为fasta下选择病毒分类为特异性条件
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[9]/div/div[1]/label/button
+      listindex:
+      locawait:
+      info:
+
 - casename: click_specificity_taxon_options
   title: 点击获取特异性病毒分类信息
   precond:
@@ -280,6 +333,26 @@
       locawait:              
       info: 点击确认按钮
 
+- casename: click_chose_taxon_specificity_viral
+  title: 输入为选择病毒下选择一种特异性病毒并确认
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: /html/body/div[4]/div/div/div/div[2]/div[1]/div/div/div[1]/div
+      listindex:
+      locawait:
+      info: 选择一种特异性病毒
+    - casesteid: 2
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[9]/div[2]/button
+      listindex:
+      locawait:
+      info: 点击确认按钮
+
 - casename: click_chose_specificity_fasta
   title: 选择以fasta文件形式添加特异性约束
   precond:
@@ -293,6 +366,19 @@
       locawait:
       info:
 
+- casename: click_chose_taxon_specificity_fasta
+  title: 输入为病毒选项选择以fasta文件形式添加特异性约束
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[8]/div/div[2]/label/button
+      listindex:
+      locawait:
+      info:
+
 - casename: click_submit_button_fasta
   title: fasta为输入下点击提交按钮
   precond:
@@ -301,7 +387,7 @@
     - casesteid: 1
       types: xpath
       operate: click
-      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[12]/div/div/div/button/span
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[12]/div/div/div/div/button
       listindex:              
       locawait:              
       info: fasta为输入下点击提交按钮
@@ -314,9 +400,22 @@
     - casesteid: 1
       types: xpath
       operate: click
-      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[13]/div/div/div/button
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[13]/div/div/div/div/button
       listindex:              
       locawait:              
+      info:
+
+- casename: click_submit_button_taxon_fasta_specificity
+  title: taxon为输入,考虑fasta特异性下点击提交按钮
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[12]/div/div/div/div/button
+      listindex:
+      locawait:
       info:
 
 - casename: click_submit_button_taxon
@@ -327,7 +426,7 @@
     - casesteid: 1
       types: xpath
       operate: click
-      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[11]/div/div/div/button/span
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[11]/div/div/div/div/button
       listindex:
       locawait:
       info:
@@ -341,6 +440,32 @@
       types: xpath
       operate: click
       locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[15]/div/div/div/button
+      listindex:
+      locawait:
+      info:
+
+- casename: click_submit_button_taxon_taxon_specificity
+  title: 输入为选择病毒下选择病毒考虑特异下点击提交按钮
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[14]/div/div/div/div/button
+      listindex:
+      locawait:
+      info:
+
+- casename: click_submit_button_fasta_taxon_specificity
+  title: fasta输入下选择病毒考虑特异下点击提交按钮
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: //*[@id="rc-tabs-0-panel-1"]/div/div/div/div/form/div[15]/div/div/div/div/button
       listindex:
       locawait:
       info:

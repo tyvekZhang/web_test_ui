@@ -120,6 +120,7 @@ class Run(Web):
         """
         选择病毒扩增方案为lamp
         """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
 
     def click_chose_lamp_fasta(self):
         """
@@ -130,6 +131,18 @@ class Run(Web):
     def click_chose_specificity_taxon(self):
         """
         以病毒分类添加特异性约束
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_chose_taxon_specificity_taxon(self):
+        """
+        选择病毒分类下以病毒分类添加特异性约束
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_chose_fasta_specificity_taxon(self):
+        """
+        输入为fasta下选择病毒分类为特异性条件
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
@@ -145,7 +158,19 @@ class Run(Web):
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
+    def click_chose_taxon_specificity_viral(self):
+        """
+        输入为选择病毒下选择一种特异性病毒并确认
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
     def click_chose_specificity_fasta(self):
+        """
+        选择以fasta文件形式添加特异性约束
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_chose_taxon_specificity_fasta(self):
         """
         选择以fasta文件形式添加特异性约束
         """
@@ -153,7 +178,19 @@ class Run(Web):
 
     def click_upload_specificity_file(self):
         """
-        调出特异性文件上传弹窗
+        调出特异性文件上传弹窗输入为选择病毒
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name)
+
+    def click_upload_specificity_file_fasta(self):
+        """
+        调出特异性文件上传弹窗输入为fasta
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name)
+
+    def click_upload_taxon_specificity_file_fasta(self):
+        """
+        调出特异性文件上传弹窗输入为fasta
         """
         self.webexe(__file__, sys._getframe().f_code.co_name)
 
@@ -169,9 +206,27 @@ class Run(Web):
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 
+    def click_submit_button_taxon_fasta_specificity(self):
+        """
+        taxon为输入,考虑fasta特异性下点击提交按钮
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
     def click_submit_button_taxon_specificity(self):
         """
         选择病毒考虑特异下点击提交按钮
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_submit_button_taxon_taxon_specificity(self):
+        """
+        输入为选择病毒下选择病毒考虑特异下点击提交按钮
+        """
+        self.webexe(__file__, sys._getframe().f_code.co_name, )
+
+    def click_submit_button_fasta_taxon_specificity(self):
+        """
+        fasta输入下选择病毒考虑特异下点击提交按钮
         """
         self.webexe(__file__, sys._getframe().f_code.co_name, )
 

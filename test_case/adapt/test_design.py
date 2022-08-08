@@ -18,7 +18,7 @@ class TestDesign:
     @allure.title("cas13 + RPA组合操作")
     @allure.description('cas13 + RPA结果查询及文件下载"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     def test_target_search_cas13_rpa(self, goDriver):
         design = Design(goDriver)
 
@@ -31,7 +31,7 @@ class TestDesign:
     @allure.title("cas13 + LAMP组合操作")
     @allure.description('cas13 + LAMP结果查询及文件下载"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     def test_target_search_cas13_lamp(self, goDriver):
         design = Design(goDriver)
 
@@ -46,7 +46,7 @@ class TestDesign:
     @allure.title("cas13 + PCR组合操作")
     @allure.description('cas13 + PCR结果查询及文件下载"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     def test_target_search_cas13_pcr(self, goDriver):
         design = Design(goDriver)
 
@@ -61,7 +61,7 @@ class TestDesign:
     @allure.title("cas12a + RPA组合操作")
     @allure.description('cas12a + RPA结果查询及文件下载"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     def test_target_search_cas12_rpa(self, goDriver):
         design = Design(goDriver)
 
@@ -75,7 +75,7 @@ class TestDesign:
     @allure.title("cas12 + LAMP组合操作")
     @allure.description('cas12 + LAMP结果查询及文件下载"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     def test_target_search_cas12_lamp(self, goDriver):
         design = Design(goDriver)
 
@@ -90,7 +90,7 @@ class TestDesign:
     @allure.title("cas12 + PCR组合操作")
     @allure.description('cas12 + PCR结果查询及文件下载"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     def test_target_search_cas12_pcr(self, goDriver):
         design = Design(goDriver)
 

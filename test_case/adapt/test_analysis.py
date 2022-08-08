@@ -20,7 +20,7 @@ class TestRun:
     @allure.title("Spark酶标仪分析操作")
     @allure.description('Spark型号分析文件并下载"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     @pytest.mark.parametrize('content', read_pytestdata(__file__, 'test_analysis_spark'))  # 测试数据
     def test_analysis_spark(self, goDriver, content):
         analysis = Analysis(goDriver)
@@ -34,7 +34,7 @@ class TestRun:
     @allure.title("Enspire酶标仪分析操作")
     @allure.description('Enspire型号分析文件并下载"')  # 用例描述
     @allure.link("https://xxx/testcase/list", name='用例链接link')
-    @pytest.mark.my_smoke  # 用例标记
+    @pytest.mark.smoke  # 用例标记
     @pytest.mark.parametrize('content', read_pytestdata(__file__, 'test_analysis_enspire'))  # 测试数据
     def test_analysis_enspire(self, goDriver, content):
         analysis = Analysis(goDriver)
