@@ -929,10 +929,10 @@ class TestRun:
 
         run.web_scroll('down')
 
-        self.screen_shot(run)
-
         with allure.step('fasta为输入下点击提交按钮'):
             run.click_submit_button_fasta()
+
+        self.screen_shot(run)
 
         self.click_confirm_ok(run)
 
@@ -944,10 +944,10 @@ class TestRun:
 
         run.sleep(1)
 
-        self.screen_shot(run)
-
         with allure.step('选择病毒下点击提交按钮'):
             run.click_submit_button_taxon()
+
+        self.screen_shot(run)
 
         self.click_confirm_ok(run)
 
@@ -1024,11 +1024,11 @@ class TestRun:
 
     def click_confirm_ok(self, run: Run):
 
-        run.sleep(1)
+        run.sleep(2)
 
         with allure.step('点击确认按钮'):
             run.click_confirm_ok()
-            run.sleep(60)
+            run.sleep(90)
 
     def click_show_result(self, run: Run):
         with allure.step('查看计算结果'):

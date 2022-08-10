@@ -11,6 +11,7 @@ import os, time
 import requests
 from selenium import webdriver
 from appium import webdriver as appbdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from public.common import ErrorExcep, logger, read_conf
 from config import WIN_CHROMEDRIVER, LUINX_CHROMEDRIVER, MAC_CHROMEDRIVER
@@ -267,7 +268,9 @@ class WebInit:
                         return self.browser_setup_args(driver)
 
                     if self.browser == 'chrome':
-                        driver = webdriver.Chrome(executable_path=WIN_CHROMEDRIVER)
+                        chrome_options = Options()
+                        chrome_options.add_argument('lang=en-us')
+                        driver = webdriver.Chrome(executable_path=WIN_CHROMEDRIVER, options=chrome_options)
                         return self.browser_setup_args(driver)
 
                     elif self.browser == 'firefox':
