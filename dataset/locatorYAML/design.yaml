@@ -8,7 +8,7 @@
     - casesteid: 1
       types: xpath
       operate: click
-      locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/form/div[1]/div[2]/div/div/div/div
+      locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/form/div[1]/div/div[2]/div/div/div/div
       listindex:              
       locawait:              
       info: 点击获取cas蛋白选项       
@@ -122,10 +122,10 @@
   precond:
   testdata:
   element:
-    - casesteid: 7
+    - casesteid: 1
       types: xpath
       operate: click
-      locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/form/div[4]/div/div/div/button/span
+      locate: //*[@id="root"]/div/section/div[2]/main/div/div/div/div/form/div[4]/div/div/div/div/button
       listindex:              
       locawait:              
       info: 点击查询按钮       

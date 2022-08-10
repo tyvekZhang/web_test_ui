@@ -12,7 +12,7 @@ from page_object.design import Design
 
 @allure.feature("反应查询")  # 测试用例特性(主要功能模块)
 @allure.story("反应结果操作")  # 模块说明
-@pytest.mark.run(order=-2)
+@pytest.mark.run(order=-5)
 class TestDesign:
 
     @allure.title("cas13 + RPA组合操作")
