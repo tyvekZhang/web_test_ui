@@ -4,251 +4,251 @@
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas12_lamp     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas12_rpa     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas12_rpa     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas12_lamp     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas12_pcr     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas13_rpa     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas13_lamp     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas13_pcr     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas13_rpa     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas13_lamp     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas13_rpa_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas13_lamp_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas13_pcr_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas13_rpa_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas13_lamp_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas13_pcr_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas13_pcr     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas12_rpa_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas12_lamp_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas12_pcr_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas12_rpa_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas12_lamp_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas12_pcr_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas12_rpa_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 
 - casename: test_submit_job_fasta_cas12_lamp_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas12_pcr_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas12_rpa_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas12_lamp_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas12_pcr_specificity_fasta     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas13_rpa_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas13_lamp_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_fasta_cas13_pcr_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas13_rpa_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas13_lamp_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
 
 - casename: test_submit_job_taxon_cas13_pcr_specificity_taxon     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryRun.fasta
-      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpecificity.fasta
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\fasta\NC_020074.fasta
+      specificity_content: E:\pythonProject\WebUiAutoTest\dataset\file\specificity\NC_002685.fasta
