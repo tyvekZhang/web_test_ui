@@ -4,10 +4,10 @@
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\trySpark.xlsx
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\analysis\trySpark.xlsx
 
 - casename: test_analysis_enspire     
   title: 输入文件路径            
   precond:        
   testdata: 
-    - content: E:\pythonProject\WebUiAutoTest\dataset\file\tryEnspire.csv
+    - content: E:\pythonProject\WebUiAutoTest\dataset\file\analysis\tryEnspire.csv

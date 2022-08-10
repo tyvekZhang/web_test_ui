@@ -1028,7 +1028,7 @@ class TestRun:
 
         with allure.step('点击确认按钮'):
             run.click_confirm_ok()
-            run.sleep(30)
+            run.sleep(60)
 
     def click_show_result(self, run: Run):
         with allure.step('查看计算结果'):

@@ -321,7 +321,7 @@
     - casesteid: 1
       types: xpath
       operate: click
-      locate: /html/body/div[3]/div/div/div/div[2]/div[1]/div/div/div[1]/div
+      locate: /html/body/div[3]/div/div/div/div[2]/div[1]/div/div/div[2]/div
       listindex:              
       locawait:              
       info: 选择一种特异性病毒
@@ -341,7 +341,7 @@
     - casesteid: 1
       types: xpath
       operate: click
-      locate: /html/body/div[4]/div/div/div/div[2]/div[1]/div/div/div[1]/div
+      locate: /html/body/div[4]/div/div/div/div[2]/div[1]/div/div/div[2]/div
       listindex:
       locawait:
       info: 选择一种特异性病毒
